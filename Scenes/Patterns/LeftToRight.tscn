@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwfo7of0ub55i"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/bullet_manager.gd" id="1_5e04e"]
+
+[node name="LeftToRight" type="Node2D"]
+script = ExtResource("1_5e04e")
+
+[node name="Points" type="Node" parent="."]
+
+[node name="Point1" type="Marker2D" parent="Points"]
+position = Vector2(0, 176)
+
+[node name="Point2" type="Marker2D" parent="Points"]
+position = Vector2(0, 288)
+
+[node name="Point3" type="Marker2D" parent="Points"]
+position = Vector2(0, 480)

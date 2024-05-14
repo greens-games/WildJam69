@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmcelwjicibjq"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/bullet_manager.gd" id="1_tcufw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ly3th"]
+radius = 16.0
+
+[node name="BulletNovaPattern" type="Node2D"]
+script = ExtResource("1_tcufw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ly3th")
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Point1" type="Marker2D" parent="Points"]
+position = Vector2(1, 0)

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmuamiw0ap2pg"]
+
+[ext_resource type="Script" path="res://Scripts/Bullets/bullet.gd" id="1_7mfks"]
+[ext_resource type="PackedScene" uid="uid://ceiqxhf1efu00" path="res://Prefabs/Hitbox.tscn" id="2_w118i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wnhcb"]
+radius = 13.0
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k45v3"]
+radius = 12.0
+height = 34.0
+
+[node name="Bullet" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 0
+script = ExtResource("1_7mfks")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_w118i")]
+collision_mask = 7
+
+[node name="HitboxCollision" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_wnhcb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_k45v3")

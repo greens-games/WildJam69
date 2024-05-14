@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfbg2kwd028k3"]
+
+[ext_resource type="PackedScene" uid="uid://cgqw3wt2yvdoa" path="res://Scenes/Player/Player.tscn" id="1_qcuj3"]
+[ext_resource type="PackedScene" uid="uid://cxvsq3vp4vyle" path="res://Scenes/Bosses/BulletNovaBoss.tscn" id="2_oixwy"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_qcuj3")]
+position = Vector2(472, 256)
+
+[node name="BulletNovaBoss" parent="." instance=ExtResource("2_oixwy")]
+position = Vector2(240, 144)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(240, 145)
